@@ -108,6 +108,11 @@ const GuardarUsuario = async (event) =>{
     }
 
 }
+
+
+
+
+
 formUsuarios.addEventListener('submit', GuardarUsuario);
 usuario_nit.addEventListener('change', EsValidoNit);
 InputUsuarioTelefono.addEventListener('change', ValidarTelefono);

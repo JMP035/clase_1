@@ -6,5 +6,5 @@ CREATE TABLE usuarios (
     usuario_telefono INT,
     usuario_correo VARCHAR(100),
     usuario_estado CHAR(1),
-    usuario_situacion SMALLINT DEFAULT 1
+    usuario_situacion SMALLINT DEFAULT 1
 );

@@ -1,22 +1,24 @@
 import '../scss/app.scss';
 
-document.addEventListener('DOMContentLoaded', (e)=> {
+document.addEventListener('DOMContentLoaded', (e) => {
     const dropdown = document.querySelector('.dropdown-menu');
-    dropdown.style.margin = 0;
+    if (dropdown) {
+        dropdown.style.margin = '0';
+    }
 
-
-    let items = document.querySelectorAll('.nav-link')
+    let items = document.querySelectorAll('.nav-link');
     items.forEach(item => {
-        if(item.href == location.href){
-            item.classList.add('active')
-            if(item.classList.contains('dropdown-item')){
-               item.parentElement.parentElement.previousElementSibling.classList.add('active')
+        if (item.href === location.href) {
+            item.classList.add('active');
+            if (item.classList.contains('dropdown-item')) {
+                const parentLink = item.parentElement?.parentElement?.previousElementSibling;
+                if (parentLink) {
+                    parentLink.classList.add('active');
+                }
             }
         }
     });
-
-
-})
+});
 
 
 
